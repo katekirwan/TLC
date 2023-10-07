@@ -23,7 +23,7 @@ export class Contact implements Initializable {
             const client = new EmailClient(endPoint, credential);
 
             const message: EmailMessage = {
-                senderAddress: "",
+                senderAddress: "donotreply@KateKirwan.com",
                 content: {
                     subject: "This is a test",
                     plainText: "This is a body"
