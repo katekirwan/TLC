@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "typescript": "^5.3.0-dev.20231007"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.22"
+  },
+  "scripts": {
+    "build": "tsc -p src"
+  }
+}
