@@ -1,6 +1,6 @@
-import { Router } from './router';
-import { Route } from './route';
-import { Contact } from './contact';
+import { Router } from './modules/router';
+import { Route } from './modules/route';
+import { Contact } from './modules/contact';
 
 export class app {
 

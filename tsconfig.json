@@ -1,11 +1,11 @@
 {
-    "extends": "../tsconfig.base",
+    "extends": "./tsconfig.base",
     "compilerOptions": {
       "module": "AMD",
       "moduleResolution": "node",
       "traceResolution": false,
       "sourceMap": true,                        /* Create source map files for emitted JavaScript files. */
-      "outFile": "../js/app.js",     /* Specify a file that bundles all outputs into one JavaScript file. */
+      "outFile": "js/app.js",     /* Specify a file that bundles all outputs into one JavaScript file. */
       // Uncomment the following during development to make things easier.
       "noImplicitAny": false,
       "noUnusedLocals": false,
@@ -26,7 +26,7 @@
       "synchronousWatchDirectory": true,
       // Finally, two additional settings for reducing the amount of possible
       // files to track  work from these directories
-      "excludeDirectories": ["**/node_modules"]//, "_build"],
+      "excludeDirectories": ["**/node_modules", "**/js"],
       //"excludeFiles": ["build/fileWhichChangesOften.ts"]
     }
 }
