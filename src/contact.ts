@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import { Initializable } from "./initializable";
 import { EmailClient, EmailMessage } from '@azure/communication-email';
 import { DefaultAzureCredential } from "@azure/identity";
@@ -15,10 +16,15 @@ export class Contact implements Initializable {
     }
 
     public async onSubmit(): Promise<void> {
+        // Background threads:
+        // https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+
         // How to send an e-mail from Azure:
         // https://learn.microsoft.com/en-us/javascript/api/overview/azure/communication-email-readme?view=azure-node-latest
 
         try {
+
+            debugger;
             const endPoint = `endpoint=httpso://katekirwancomms.unitedstates.communication.azure.com/;accesskey=kEcC+FOm5m0reBz6M2H04Oj56Urh5yhaUkbApV4XLceijoGYqSRnIA3iFDqlktcc5Fb+V995RxuRy1g/MU4Nmw==`;
             const credential = new DefaultAzureCredential();
             const client = new EmailClient(endPoint, credential);

@@ -1,14 +1,17 @@
+// https://marcobotto.com/blog/compiling-and-bundling-typescript-libraries-with-webpack/
+
 // webpack.config.js
 const path = require("path");
 
 module.exports = {
-  entry: "./src/app.ts",
+  entry: "./src/kateApp.ts",
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: "ts-loader",
-        exclude: /node_modules/
+        //exclude: /node_modules/
       }
     ]
   },
@@ -19,7 +22,7 @@ module.exports = {
     }
   },
   output: {
-    filename: "bundle.js",
+    filename: "kateApp.js",
     path: path.resolve(__dirname, "js")
   }
 };

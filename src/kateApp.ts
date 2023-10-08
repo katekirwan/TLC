@@ -2,7 +2,7 @@ import { Router } from './router';
 import { Route } from './route';
 import { Contact } from './contact';
 
-export class app {
+export class kateApp {
 
     #router: Router;
 
@@ -21,3 +21,9 @@ export class app {
         this.#router.init(navID);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const k = new kateApp();
+    k.init("#topnav");
+});
