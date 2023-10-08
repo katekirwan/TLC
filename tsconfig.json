@@ -5,15 +5,15 @@
       "moduleResolution": "node",
       "traceResolution": false,
       "sourceMap": true,                        /* Create source map files for emitted JavaScript files. */
-      "outFile": "js/app.js",     /* Specify a file that bundles all outputs into one JavaScript file. */
+      "outDir": "./js/",                        /* Specify a file that bundles all outputs into one JavaScript file. */
       // Uncomment the following during development to make things easier.
       "noImplicitAny": false,
       "noUnusedLocals": false,
       "noUnusedParameters": false,
       "strictPropertyInitialization": false
     },
-    "include": ["./src/**/*.ts"],
-    "exclude": ["**/node_modules"],
+    //"include": ["./src/**/*.ts"],
+    //"exclude": ["**/node_modules"],
       // NEW: Options for file/directory watching
     "watchOptions": {
       // Use native file system events for files and directories

@@ -4,7 +4,8 @@ import { DefaultAzureCredential } from "@azure/identity";
 
 export class Contact implements Initializable {
 
-    #blib: string = "";
+    // Need to figure out how to bundle the client library with the TS code.
+    // https://github.com/Azure/azure-sdk-for-js/blob/main/documentation/Bundling.md
 
     public init() {
 
