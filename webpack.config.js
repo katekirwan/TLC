@@ -15,6 +15,9 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   resolve: {
     extensions: [".ts", ".js"],
     fallback: {

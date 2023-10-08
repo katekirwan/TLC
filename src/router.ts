@@ -10,7 +10,7 @@ declare global {
 
 export class Router {
 
-    #navigationContainer: JQuery<HTMLElement>;
+    #navigationContainer: JQuery<HTMLElement> | undefined = undefined;
     #routes: Route[];
     #rootElem: HTMLElement;
 
@@ -51,7 +51,7 @@ export class Router {
         navContainer.append(burger);
 
         // Now watch for the page location changing.
-        window.addEventListener('hashchange', (e) => {
+        window.addEventListener('hashchange', () => {
             this.hasChanged();
         });
         this.hasChanged();
@@ -121,6 +121,11 @@ export class Router {
     }
 
     private selectRoute(route: Route, content: string): void {
+
+        if (!this.#navigationContainer) {
+            throw 'error: Navigation container not initialized.';
+        }
+
         // Find the nav links.
         const links = this.#navigationContainer.find("a");
 

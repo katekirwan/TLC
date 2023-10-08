@@ -1,23 +1,15 @@
 {
     "extends": "./tsconfig.base",
     "compilerOptions": {
-      //"module": "CommonJS",
-      //"module": "AMD",
       "module": "es2015",
-      //"module": "es6",
-      //"target": "es2016",
       "moduleResolution": "node",
-      //"lib": [ "es2016", "dom" ],
       "traceResolution": false,
-      //"declaration": true,
-      "sourceMap": true,            /* Create source map files for emitted JavaScript files. */
-      //"outDir": "./js/",           /* Specify a file that bundles all outputs into one JavaScript file. */
-      //"outFile": "./js/kateApp.js",
+      "sourceMap": true            /* Create source map files for emitted JavaScript files. */
       // Uncomment the following during development to make things easier.
-      "noImplicitAny": false,
-      "noUnusedLocals": false,
-      "noUnusedParameters": false,
-      "strictPropertyInitialization": false
+      //"noImplicitAny": false,
+      //"noUnusedLocals": false,
+      //"noUnusedParameters": false,
+      //"strictPropertyInitialization": false
     },
     //"include": ["./src/**/*.ts"],
     //"exclude": ["**/node_modules"],

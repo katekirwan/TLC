@@ -24,7 +24,6 @@ export class Contact implements Initializable {
 
         try {
 
-            debugger;
             const endPoint = `endpoint=httpso://katekirwancomms.unitedstates.communication.azure.com/;accesskey=kEcC+FOm5m0reBz6M2H04Oj56Urh5yhaUkbApV4XLceijoGYqSRnIA3iFDqlktcc5Fb+V995RxuRy1g/MU4Nmw==`;
             const credential = new DefaultAzureCredential();
             const client = new EmailClient(endPoint, credential);
@@ -47,10 +46,13 @@ export class Contact implements Initializable {
 
             const poller = await client.beginSend(message);
             const response = await poller.pollUntilDone();
+            if (response.error) {
+                alert(response.error);
+            }
 
             alert("Sent E-mail");
-        } catch (e) {
-            alert("error");
+        } catch (e:any) {
+            alert(e.message);
         }
 
     }

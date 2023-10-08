@@ -4,7 +4,7 @@ import { Contact } from './contact';
 
 export class kateApp {
 
-    #router: Router;
+    #router: Router | undefined = undefined;
 
     public init(navID: string) {
 
