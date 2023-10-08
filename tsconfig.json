@@ -1,8 +1,9 @@
 {
     "extends": "./tsconfig.base",
     "compilerOptions": {
-      "module": "AMD",
+      "module": "es6",
       "moduleResolution": "node",
+      "target": "es6",
       "traceResolution": false,
       "sourceMap": true,                        /* Create source map files for emitted JavaScript files. */
       "outDir": "./js/",                        /* Specify a file that bundles all outputs into one JavaScript file. */
