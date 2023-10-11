@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import { Initializable } from "./initializable";
 import { EmailClient, EmailMessage } from '@azure/communication-email';
-import { DefaultAzureCredential } from "@azure/identity";
+import { ClientSecretCredential } from "@azure/identity";
 
 export class Contact implements Initializable {
 
@@ -24,8 +24,12 @@ export class Contact implements Initializable {
 
         try {
 
+            const tenantID = "87c54900-8315-45f0-9e70-fae4d431cfdf";
+            const clientID = "91b6a9fa-b5c6-4523-a1bd-19940b75367b"
+            const secret = "91b6a9fa-b5c6-4523-a1bd-19940b75367b";
+
             const endPoint = `endpoint=httpso://katekirwancomms.unitedstates.communication.azure.com/;accesskey=kEcC+FOm5m0reBz6M2H04Oj56Urh5yhaUkbApV4XLceijoGYqSRnIA3iFDqlktcc5Fb+V995RxuRy1g/MU4Nmw==`;
-            const credential = new DefaultAzureCredential();
+            const credential = new ClientSecretCredential(tenantID, clientID, secret);
             const client = new EmailClient(endPoint, credential);
 
             const message: EmailMessage = {
