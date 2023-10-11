@@ -28,7 +28,7 @@ export class Contact implements Initializable {
             const clientID = "91b6a9fa-b5c6-4523-a1bd-19940b75367b"
             const secret = "91b6a9fa-b5c6-4523-a1bd-19940b75367b";
 
-            const endPoint = `endpoint=httpso://katekirwancomms.unitedstates.communication.azure.com/;accesskey=kEcC+FOm5m0reBz6M2H04Oj56Urh5yhaUkbApV4XLceijoGYqSRnIA3iFDqlktcc5Fb+V995RxuRy1g/MU4Nmw==`;
+            const endPoint = "https://katekirwancomms.unitedstates.communication.azure.com/";//`endpoint=https://katekirwancomms.unitedstates.communication.azure.com/;accesskey=kEcC+FOm5m0reBz6M2H04Oj56Urh5yhaUkbApV4XLceijoGYqSRnIA3iFDqlktcc5Fb+V995RxuRy1g/MU4Nmw==`;
             const credential = new ClientSecretCredential(tenantID, clientID, secret);
             const client = new EmailClient(endPoint, credential);
 
